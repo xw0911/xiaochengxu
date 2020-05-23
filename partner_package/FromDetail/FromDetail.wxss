@@ -1,0 +1,21 @@
+/* partner_package/FromDetail/FromDetail.wxss */
+.module{
+  background-color: #fff;
+  border-radius: 5px;
+  /* margin-bottom: 10px;  */
+}
+.content{
+  padding: 5px 10px;
+  font-size: 15px;
+  height:40px;
+  line-height: 40px;
+}
+
+.item_content{
+  background-color:#F1ECF4;
+  width:180px;
+  height:25px;
+  text-align: center;
+  line-height: 25px;
+  border: 1px solid rgb(180, 131, 192);
+}

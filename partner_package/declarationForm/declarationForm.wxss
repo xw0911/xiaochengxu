@@ -1,0 +1,36 @@
+/* partner_package/declarationForm/declarationForm.wxss */
+ .picker_view{
+  width:130px;
+  height:30px;text-align:center;
+  line-height:30px
+} 
+.module{
+  /* background-color: #fff; */
+  border-radius: 5px;
+  margin-bottom: 5px; 
+  padding: 5px 10px;
+}
+.picker{
+  background-color: #fff;
+}
+.saveButton{
+  background-color: rebeccapurple;
+  color: #ffffff;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-left:4%;
+  text-align:center;
+  line-height:30px;
+  width:70px;
+  }
+  .form_detail{
+    background-color: #fff;
+    padding: 12px 12px ;
+    border-radius: 5px;
+  }
+.icon-img{
+   width: 43px;
+  height: 43px;
+  /* margin-left: 5px */
+}

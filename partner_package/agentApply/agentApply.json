@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "i-input": "../../components/iView-Weapp-UI/input/index"
+  },
+  "navigationBarTitleText": "申请成为代理商"
+
+}

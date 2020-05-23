@@ -1,0 +1,25 @@
+/* partner_package/approveAgree/approveAgree.wxss */
+.height{
+  height: 500px;
+  padding: 10px 0 0 5px;
+  width: 100%;
+}
+.saveButton{
+	background-color: rebeccapurple;
+	color: #ffffff;
+	height: 40px;
+	border-radius: 20px;
+	position: fixed;
+	bottom: 10px;
+	left: 10vw;
+	font-size: 14px;
+}
+
+
+.saveButton2{
+  background-color:  rebeccapurple;
+  color: #ffffff;
+  text-align: center;
+  line-height: 40px;
+
+}

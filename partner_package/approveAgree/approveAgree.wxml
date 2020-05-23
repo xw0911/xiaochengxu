@@ -1,0 +1,8 @@
+<view class="container">
+<view class="p-15">
+ <textarea placeholder="请输入审批意见" class="bck-fff height f-14 col-3 mt-5"></textarea>
+</view>
+    	<cover-view  class="saveButton dis-flex flex-x-between" style="width:80%">
+		<button class="saveButton2" style="width:50%" catchtap="onClickSubmit">确定同意</button>
+	</cover-view>
+</view>

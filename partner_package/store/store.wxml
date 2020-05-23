@@ -1,0 +1,33 @@
+<!--partner_package/checkPeople/checkPeople.wxml-->
+<view class="container">
+	<view class="p-15">
+		<i-tabs current="{{ currentTabKey }}" bindchange="onClickTabChange" color="#794891">
+			<i-tab key="tab1" title="待审批" bindtap="getCheck"></i-tab>
+			<i-tab key="tab2" title="已审批" bindtap="getCheck"></i-tab>
+		</i-tabs>
+	</view>
+	<view class="mr-10 module ml-10 dis-flex" bindtap="goselect">
+		<image src="../../images/yy_sx_ss@2x.png" style="" class="search"></image>
+		<input class="check-people bck-fff pl-40 Ipt" placeholder="请输入名称后搜索" bindinput="getData"></input>
+		<text class="ml-10 shaixuan" >筛选</text>
+		<image src="../../images/yy_sx@2x.png" class="ml-10 mt-10 select-img " bindtap="goselect"></image>
+	</view>
+
+	<block wx:if="{{currentList}}">
+	<view class="mt-10 ml-10 bor-3 pl-10 pt-10 bck-fff content" wx:for="{{checkList}}" wx:key="*this" data-id="{{item.id}}" data-statusname="{{item.statusName}}" bindtap="goDetail">
+			<view class="f-16 col-yellow">{{item.statusName}}</view>
+			<view class="mt-10 col-grey">店家名称：{{item.applyName}}</view>
+			<view class="mt-10 col-grey">申请时间：{{item.applyTime}}</view>
+		</view>
+	</block>
+
+	<block wx:else>
+		<view class="mt-10 ml-10 bor-3 pl-10 pt-10 bck-fff content1" wx:for="{{checkList}}" wx:key="*this" data-id="{{item.id}}" data-statusname="{{item.statusName}}" bindtap="goDetail">
+			<view class="f-16 {{item.statusName=='已拒绝'?'col-m':'col-b'}}">{{item.statusName}}</view>
+			<view class="mt-10 col-grey">店家名称：{{item.applyName}}</view>
+			<view class="mt-10 col-grey">申请时间：{{item.applyTime}}</view>
+			<view class="mt-10 col-grey">审批时间：{{item.approveTime}}</view>
+		</view>
+	</block>
+
+</view>

@@ -1,0 +1,38 @@
+<!--emp_package/selectKind/selectKind.wxml-->
+<view class="container">
+<scroll-view scroll-y='false'>
+  	<view class="mr-10 ml-10 dis-flex mt-10" bindtap="goselect">
+		<image src="../../images/yy_sx_ss@2x.png" style="margin-top:20px" class="search"></image>
+		<input class="check-people bck-fff pl-40 Ipt mt-10" placeholder="请输入名称后搜索" bindinput="getDatail"></input>
+	</view>
+<view style='margin:20px;padding:10px 10px;padding-bottom:18px' class="bck-fff">
+  <z-tree tree="{{tree}}" bindcustomevent="pageEventListener1"></z-tree>
+</view>
+
+</scroll-view>
+
+  <view class="dis-flex flex-x-around footer_content bck-fff" style="height:60px">
+    <view class="dis-flex flex-x-between" style="width:30%" bindtap="openDialog"><view class="col-pink" style="line-height:60px">已选择： {{ListLength}}个</view> <image src="../../images/yy_xsjt.png" style="width:15px;height:15px;margin-top: 20px"></image></view>
+    <view class="saveButton" style="margin-top:15px" bindtap="goKind">确定</view>
+  </view>
+  	<view class="{{showList? 'full-bg full-opacity':''}}" catchtap="hideBackground"></view>  
+
+</view>
+<!-- 底部弹窗 -->
+   <view class="sub_menu" wx:if='{{showList}}'>
+    <view style="padding:8px">
+    <view class="dis-flex flex-x-between">
+         <view class="col-grey">已选内容</view>
+          <view>
+            <image src="../../images/xznr_qk@2x.png" style="width:15px;height:15px" class="mt-5 mr-10"></image>
+            <text bindtap="clear">清空</text>
+          </view>
+    </view>
+    <view class="dis-flex flex-x-between b-b" style="width:100%" wx:for='{{selectProject}}' wx:key='{{item.index}}'>
+      <view >{{item.pcName}}</view>
+      <image src="../../images/yy_del@2x.png" style="width:15px;height:15px" class="mt-5" data-id="{{item.productPcID}}" data-index="{{index}}" bindtap="deleteList"></image>
+    </view>
+    </view>
+   
+   </view>
+

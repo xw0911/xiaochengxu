@@ -1,0 +1,17 @@
+<!--partner_package/partnerLogin/partnerLogin.wxml-->
+<view class="containerlog ">
+
+	<image src="../../images/logInlogo.jpg" class="log_icon"></image>
+	
+
+
+
+	<button bindgetphonenumber="partnerCodeNemtWork"
+	 style="width:80vw"
+	 open-type="getPhoneNumber" 
+	 type="primary"
+	 role="button"  
+	 class=" f-14 buttonC">微信一键登录</button>
+
+
+</view>

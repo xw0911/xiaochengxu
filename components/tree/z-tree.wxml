@@ -1,0 +1,17 @@
+<!--components/tree/z-tree.wxml-->
+<block wx:for="{{tree}}" wx:key="{{item.productPcID}}" >
+	<view catchtap='toggle' data-id="{{item.productPcID}}" data-isFolder="{{item.isFolder}}" data-isOpen="{{item.isOpen}}">
+		<view style="display:flex;justify-content: space-between;">
+			<view style="height:18px" bindtap="changeColor">
+				<image wx:if="{{item.isFolder}}" src="{{item.isOpen?'../../images/xl_1@2x.png':'../../images/xl_2@2x.png'}}" style="width:15px;height:15px"></image>
+				<text style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:280px;display:inline-block">{{item.pcName}}</text>
+			</view>
+			<view catchtap="checkedChange" id="{{item.productPcID}}">
+				<image src="{{item.isCheck?'../../images/yy_xz_gou@2x.png':'../../images/gou_2@2x.png'}}" style="width:15px;height:15px"></image>
+			</view>
+		</view>
+		<view wx:if="{{item.isFolder && item.isOpen}}" class='item'>
+			<z-tree id='treeChildren' tree="{{item.childrenList}}" bind:customevent="pageEventListener"></z-tree>
+		</view>
+	</view>
+</block>

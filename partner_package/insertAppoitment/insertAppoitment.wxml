@@ -1,0 +1,111 @@
+<!--partner_package/insertAppoitment/insertAppoitment.wxml-->
+<view class="container">
+	<view class="b-t ">
+		<view class="dis-flex flex-x-between bck-fff b-b pl-5 mt-10" style="height:40px">
+			<view style="width:50px;" class="dis-flex">
+				<view class="isRequiredss">*</view>
+				<view class="lh">顾客</view>
+			</view>
+			<view>
+				<text class="col-grey lh mr-5" bindtap="goCustomer">{{selectCustomer}}</text>
+				<image src="../../images/zk@2x.png" class="icon_img lh mt-10"></image>
+			</view>
+		</view>
+		<view class="dis-flex flex-x-between bck-fff b-b pl-5" style="height:40px">
+			<view class="lh ">运营专员</view>
+			<view class=" lh mr-5">{{consultant}}</view>
+		</view>
+	</view>
+	<view class="b-t mt-10">
+		<view class="dis-flex flex-x-between bck-fff b-b " style="height:40px">
+			<view class="dis-flex">
+				<view class="isRequiredss">*</view>
+				<view class="lh">修复类型</view>
+			</view>
+			<view>
+				<radio-group class="radio-group lh" bindchange="radioChange">
+					<radio color='#ffffff' class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.value}}" checked="{{item.checked}}">
+						<text>{{item.name}}</text>
+					</radio>
+				</radio-group>
+			</view>
+		</view>
+		<view class="dis-flex flex-x-between bck-fff b-b pl-5" style="height:40px">
+			<view class="dis-flex">
+				<view class="lh">医院信息</view>
+			</view>
+			<view>
+				<text class="col-grey lh mr-5" bindtap="goSelectHospital">{{selectHospital}}</text>
+				<image src="../../images/zk@2x.png" class="icon_img lh mt-10"></image>
+			</view>
+		</view>
+		<view class="dis-flex flex-x-between bck-fff b-b pl-5" style="height:40px">
+			<view class="dis-flex">
+				<view class="isRequiredss">*</view>
+				<view class="lh">医生</view>
+			</view>
+			<view>
+				<text class="col-grey lh mr-5"  bindtap="goSelectDoctor">{{selectDoctor}}</text>
+				<image src="../../images/zk@2x.png" class="icon_img lh mt-10"></image>
+			</view>
+		</view>
+
+		<view class="dis-flex flex-x-between bck-fff b-b pl-5 mt-5" style="height:40px">
+			<view class="dis-flex">
+				<view class="isRequiredss">*</view>
+				<view class="lh">预约到院时间</view>
+			</view>
+			<view class="dis-flex">
+				<picker mode="date" value="{{date}}" start="2010-09-01" end="2050-09-01" bindchange="bindDateStart">
+					<view class="apt-data">
+						{{ariveData}}
+					</view>
+				</picker>
+				<image src="../../images/zk@2x.png" class="icon_img lh mt-10"></image>
+			</view>
+		</view>
+		<view class="dis-flex flex-x-between bck-fff b-b pl-5" style="height:40px">
+			<view class="dis-flex">
+				<view class="isRequiredss">*</view>
+				<view class="lh">预约到院时间</view>
+			</view>
+			<view class="dis-flex">
+				<picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">
+					<view class="apt-data">
+						{{ariveTime}}
+					</view>
+				</picker>
+				<image src="../../images/zk@2x.png" class="icon_img lh mt-10"></image>
+			</view>
+		</view>
+		<view class="dis-flex flex-x-between bck-fff b-b pl-5" style="height:40px;align-items:center">
+			<view>预约时长</view>
+			<view class="mr-5 flex-x-around item_content">
+				<view style="background-color:#cccccc;" class="btn mr-10" bindtap="delete">-</view>
+				<view class="mr-10">
+					<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+						<view class="picker">
+							{{array[index]}}分钟
+						</view>
+					</picker>
+				</view>
+				<view style="background-color:#794891;" class="btn mr-10" bindtap="plus">+</view>
+			</view>
+		</view>
+	</view>
+
+		<view class="dis-flex flex-x-between bck-fff b-b pl-5 mt-5" style="height:40px">
+			<view class="dis-flex">
+				<view class="lh">选择品项</view>
+			</view>
+			<view>
+				<text class="col-grey lh mr-5" bindtap="goSelectKind">您选择了{{listKind.length}}项</text>
+				<image src="../../images/zk@2x.png" class="icon_img lh mt-10"></image>
+			</view>
+		</view>
+
+		<button class="saveButton1" style="width:80%;" bindtap="deterMine">保存</button>
+
+
+
+</view>

@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "i-cell-group": "../../components/iView-Weapp-UI/cell-group/index",
+    "i-cell": "../../components/iView-Weapp-UI/cell/index",
+    "i-icon": "../../components/iView-Weapp-UI/icon/index"
+
+  },
+  "navigationBarTitleText": "我的佣金"
+
+}

@@ -1,0 +1,18 @@
+<!--partner_package/introducerApply/introducerApply.wxml-->
+<view class="container pt-5">
+
+	<i-input title="介绍人名称" placeholder="请输入" autofocus right="true" data-index="0"   bind:change = "inValueChange" />
+	<i-input  type="number" title="手机号" placeholder="请输入手机号" right="true" data-index="1"  bind:change = "inValueChange"/>
+
+	<i-input i-class="mt-5" title="开户行"  placeholder="请输入开户行以及支行名称" right="true" data-index="2"  bind:change = "inValueChange"/>
+	<i-input  type="number" title="开户账号" placeholder="请输入" right="true" data-index="3"  bind:change = "inValueChange"/>
+
+	<view class="f-14 col-3 mt-5 bck-fff p-10">备注</view>
+	<textarea class="bck-fff p-10 widthText" placeholder="请输入备注" data-index="4"  bind:change = "inValueChange">
+
+	</textarea>
+
+	<button class="saveButton" style="width:80%" bindtap="onClickSubmit">提交申请</button>
+
+
+</view>

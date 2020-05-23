@@ -1,0 +1,117 @@
+<!--pages/appointment/appointment.wxml-->
+<view class="container">
+<view style="margin-bottom:40px">
+		<view class="dis-flex flex-x-around bck-fff">
+		<view>
+			<picker bindchange="bindPickerChangeKind" value="{{indexKind}}" range="{{arraykind}}">
+				<view class="dis-flex">
+					<view class="picker">
+						{{arraykind[indexKind]}}
+					</view>
+					<view>
+						<image src="../../images/xl@2x.png" class="icon-img"></image>
+					</view>
+				</view>
+			</picker>
+		</view>
+		<view>
+			<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+				<view class="dis-flex">
+					<view class="picker">
+						{{array[index]}}
+					</view>
+					<view>
+						<image src="../../images/xl@2x.png" class="icon-img"></image>
+					</view>
+				</view>
+			</picker>
+		</view>
+		<view class="dis-flex ">
+			<view class='line'></view>
+			<view class="flex-x-between dis-flex header">
+				<view class="dis-flex" bindtap="openDialog">
+					<view>筛选</view>
+					<view>
+						<image src="../../images/yy_sx@2x.png" class="select_img"></image>
+					</view>
+				</view>
+				<view class="saveButton1" bindtap="insertAppointment">
+					新增
+				</view>
+			</view>
+
+		</view>
+	</view>
+	<view class="bck-fff pt-10 pl-10 pb-15 pr-15 mt-5" wx:for="{{appointmentList}}" wx:key='*this' data-aptid="{{item.appointmentID}}" bindtap="goAppointmentDetail">
+		<view class="dis-flex flex-x-between mt-10">
+			<view class="dis-flex">
+				<text>{{item.custName}}</text>
+				<text class="ml-15 bor-5 typeName">{{item.typeName}}</text>
+			</view>
+			<text style="background-color:{{item.color}};padding:7px 5px" class="f-10 bor-3 col-f">{{item.statusName}}</text>
+		</view>
+		<view class="mt-10 col-grey">医生：{{item.doctorName}}</view>
+		<view class="mt-10 col-grey">预约到院时间：{{item.appointmentTime}}</view>
+		<view class="mt-10 " >修复类型： <text class="{{item.repairTypeName == '本院修复'?'col-pink':'col-red'}}">{{item.repairTypeName}}</text></view>
+	</view>
+</view>
+
+
+
+
+
+
+	<!-- 底部弹窗 -->
+	<view class="weui-demo-dialog {{istrue ? 'weui-demo-dialog_show' : ''}}">
+		<view class="weui-mask" bindtap="closeDialog"></view>
+		<view class="weui-half-screen-dialog content" catchtap="stopEvent">
+			<view style="margin-bottom:20px">
+				筛选
+			</view>
+			<view style="margin-bottom:20px">
+				<text style="margin-bottom:20px">顾客</text>
+				<view style="width:100%;padding:5px 18px">
+					<input placeholder="请输入顾客姓名，电话搜索" class="bor-5" style="width:90%;height:35px;border:1px solid #ccc" value="{{custCode}}" bindinput="inputContent"></input>
+				</view>
+			</view>
+			<view class="mt-5 mb-5">类型</view>
+			<view class="dis-flex flex-x-around">
+				<view wx:for='{{arrayKind}}' bindtap="checkStatic" data-id="{{index}}" wx:key='*this'>
+					<view class="{{typeIndex==index?'saveButton1':'saveButton2'}} mb-15">{{item.name}}</view>
+				</view>
+			</view>
+			<view class="mt-5 mb-5">预约状态</view>
+			<view class="dis-flex flex-x-between appontment-item">
+				<view wx:for='{{appointmentType}}' wx:key='*this'>
+					<view class="{{appointmentIndex==index?'saveButton1':'saveButton2'}} mb-15" wx:key='*this' style="width:90px;margin-left:10px" data-id="{{index}}" bindtap="appointmentStaus">{{item.name}}</view>
+				</view>
+			</view>
+
+			<view class="mb-10">预约到院时间</view>
+			<view class="mt-5 dis-flex">
+				<view style="margin-left:12%;">
+					<picker mode="date" value="{{date}}" start="2010-09-01" end="2050-09-01" bindchange="bindDateStart">
+						<view class="b-a data_time bor-3">
+							{{startTime}}
+						</view>
+					</picker>
+				</view>
+				<view style="margin-left:12%;">--</view>
+				<view style="margin-left:12%;">
+					<picker mode="date" value="{{date}}" start="2010-09-01" end="2050-09-01" bindchange="bindDateEnd">
+						<view class="b-a data_time bor-3">
+							{{endTime}}
+						</view>
+					</picker>
+				</view>
+
+			</view>
+
+			<view class="saveButton dis-flex flex-x-between mt-20" style="width:90%">
+				<button class="saveButton3" style="width:50%;" catchtap="clearContent">重置</button>
+				<button class="saveButton4" style="width:50%" catchtap="onClickSubmit">确定</button>
+			</view>
+		</view>
+	</view>
+
+</view>

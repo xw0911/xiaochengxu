@@ -1,0 +1,31 @@
+<!--pages/aft_login/aft_login.wxml-->
+<view class="container" wx:key='*this'>
+	<view class="p-15">
+		<view class="module">
+			<view class="title p-10 b-b f-w">审批</view>
+			<view class="dis-flex flex_wrap p-0-15">
+			<view class="flex_li" wx:for='{{aftLogin}}' wx:key='*this' bindtap="goCheck" data-id="{{item.id}}">
+					<view>
+						<image class="icon_img" src="{{item.iconPath}}"></image>
+					</view>
+					<text>{{item.text}}</text>
+			</view>    
+			</view>
+		</view>
+	</view>
+  	<view class="p-15">
+		<view class="module">
+			<view class="title p-10 b-b f-w">个人中心</view>
+			<view class="dis-flex flex_wrap p-0-15">
+					<view class="flex_li" wx:for='{{aftPeople}}' wx:key='*this' bindtap="goCheck" data-id="{{item.id}}">
+					<view>
+						<image class="icon_img" src="{{item.iconPath}}"></image>
+					</view>
+					<text>{{item.text}}</text>
+			</view>   
+			</view>
+		</view>
+	</view>
+
+
+</view>

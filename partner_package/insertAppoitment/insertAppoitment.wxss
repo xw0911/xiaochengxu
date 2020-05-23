@@ -1,0 +1,88 @@
+/* partner_package/insertAppoitment/insertAppoitment.wxss */
+
+.isRequiredss {
+  color: #ed3f14;
+  font-size: 20px;
+  padding-right: 3px;
+  padding-top: 3px;
+  line-height: 40px;
+}
+
+.icon_img {
+  height: 12px;
+  width: 12px;
+}
+
+.lh {
+  line-height: 40px;
+}
+
+.radio {
+  margin-right: 8px;
+}
+
+.apt-data {
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.item_content {
+  display: flex;
+  /* width:80px; */
+  text-align: center;
+  align-items: center
+}
+
+.btn {
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  line-height: 15px;
+  color: #ffffff;
+}
+/* 自定义radio样式 */
+/*radio未选中时样式 */
+radio .wx-radio-input {
+  /* 自定义样式.... */
+  /*我这里没有进行，未选中的样式修改*/
+  height: 25rpx;
+  width: 25rpx;
+  margin-top: -4rpx;
+  margin-right: 4rpx;
+  border-radius: 50%;
+  border: 2rpx solid #999;
+  background: transparent;
+}
+
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+radio .wx-radio-input.wx-radio-input-checked {
+  /* border: none; */
+  border-color: #794891 !important;
+}
+
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+radio .wx-radio-input.wx-radio-input-checked::before {
+  /* 去除对号 */
+  content: '';
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  background-color: #794891;
+  /* 居中 */
+  margin-top: 0rpx;
+  display: flex;
+  position: relative;
+}
+
+.saveButton1 {
+  background-color: #794891;
+  color: #ffffff;
+  text-align: center;
+  left: 10%;
+  bottom: 2rem;
+  position: fixed;
+  line-height: 40px;
+  border-radius: 20px;
+}

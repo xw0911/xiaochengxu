@@ -1,0 +1,5 @@
+/* components/tree/tree.wxss */
+.item {
+  padding-left: 20px;
+ 
+}

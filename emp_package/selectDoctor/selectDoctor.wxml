@@ -1,0 +1,16 @@
+<view class="container">
+	<view class="mr-10 ml-10 dis-flex mt-10" bindtap="goselect">
+		<image src="../../images/yy_sx_ss@2x.png" style="margin-top:20px" class="search"></image>
+		<input class="check-people bck-fff pl-40 Ipt mt-10" placeholder="请输入名称后搜索" bindinput="getDatail"></input>
+	</view>
+
+	<view class="bck-fff mt-15" style="width:100%" wx:for='{{content}}' wx:key='*this'>
+		<view class="mt-15" style="padding:10px;" data-doctor="{{item.name}}" data-doctorid="{{item.empID}}" bindtap="getDoctor">
+			<view style="width:130px" class="dis-flex flex-x-between">
+				<view class="fw-500" style="font-size:20px"> {{item.name}}</view>
+				<view class="col-grey mt-5"> {{item.empID}}</view>
+			</view>
+			<view class="col-grey">{{item.jobName}}</view>
+		</view>
+	</view>
+</view>

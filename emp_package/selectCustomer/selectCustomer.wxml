@@ -1,0 +1,37 @@
+<!--emp_package/selectCustomer/selectCustomer.wxml-->
+<view class="container">
+	<view class="mr-10 ml-10 dis-flex mt-10" bindtap="goselect">
+		<image src="../../images/yy_sx_ss@2x.png" style="margin-top:20px" class="search"></image>
+		<input class="check-people bck-fff pl-40 Ipt mt-10" placeholder="请输入名称后搜索" bindinput="getDatail"></input>
+	</view>
+	<view class="page" style="margin-top:10px">
+		<view class="content">
+			<!-- 左侧内容区 -->
+			<scroll-view class="person-list" enable-back-to-top scroll-into-view="{{toView}}" scroll-y="true" scroll-with-animation="true">
+				<view class="person" wx:for="{{personList}}" wx:key="index" id="{{ 'inToView'+item.id}}">
+					<view class="person-sign">{{item.sign}}</view>
+					<view class="person-content">
+						<view class="person-cont {{item.name.length > 1 ? 'border' : ''}}" bindtap="choose" data-item="{{it}}" wx:for="{{item.name}}" wx:key="id" wx:for-item="it">
+							<image class="person-head" src="../../images/grzx_zwt@2x.png"></image>
+							<view>
+								<view style="display:flex;justify-content:space-between;">
+									<text class="person-name">{{it.CustName}}</text>
+									<image style="width:15px;height:15px;margin-left:30px;margin-top:3px" src="../../images/yy_sj@2x.png"/>
+									<text class="col-grey">{{it.CustPhone}}</text>
+								</view>
+								<view style="display:flex;justify-content:space-between;">
+									<image style="width:15px;height:15px;margin-top: 3px" src="../../images/yy_ddsj@2x.png" />
+									<text class="col-grey">上次到店时间：{{it.RecentlyArrivalTime}}</text>
+								</view>
+							</view>
+							<view class="ml-15">
+								<image style="width:15px;height:15px" class="ml-15" src="../../images/yy_lj@2x.png"/>
+								<text> {{it.ConsultantName}}</text>
+							</view>
+						</view>
+					</view>
+				</view>
+			</scroll-view>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,57 @@
+<!--partner_package/storeApply/storeApply.wxml-->
+<view class="container pt-5 pb-50">
+	<i-input title="店家名称" autofocus placeholder="请输入" right="true"  data-index="0"   bind:change = "inValueChange" />
+	<i-input title="联系人"  placeholder="请输入"  right="true"  data-index="1"   bind:change = "inValueChange" />
+	<i-input type="number" title="手机号" placeholder="请输入手机号"  right="true"  data-index="2"   bind:change = "inValueChange" />
+	<i-input title="邮箱"  placeholder="请输入" isRequired="{{false}}"  right="true"  data-index="3"   bind:change = "inValueChange" />
+	<i-input title="所在地区"  placeholder="请输入"  right="true"  data-index="4"   bind:change = "inValueChange" />
+	<i-input title="详细地址"  placeholder="请输入"  right="true"  data-index="5"   bind:change = "inValueChange" />
+
+	<!-- <i-input i-class="mt-5"   title="店家来源"  placeholder="请输入"  right="true" /> -->
+<view class="dis-flex flex-dir-row mt-5 col-f">
+		<i-input title="店家来源"  disabled = "true"  right="true" data-index="6"  bind:change = "inValueChange" /> 
+		<view class="nav_son " bindtap="onClickSelect" >
+			<view class="f-4 col-6">{{menuItemTitle}}</view>
+			<view class="icon">
+				<image class="icon_img" src="{{menuShow? '/images/yy_xz12@2x.png':'/images/yy_xz1@2x.png'}}"></image>
+			</view>
+			<!-- :'/images/yy_xz2@2x.png' -->
+		</view>
+	</view>
+	<i-input title="{{menuItemTitle}}"  placeholder="请输入"  right="true"  data-index="7"   bind:change = "inValueChange" />
+
+	<i-input i-class="mt-5"   title="开户行"  placeholder="请输入开户行以及支行名称"   right="true"  data-index="8"   bind:change = "inValueChange" />
+	<i-input type="number" title="开户账号" placeholder="请输入"   right="true"  data-index="9"   bind:change = "inValueChange" />
+
+	<i-input i-class="mt-5"   title="业务代表"  placeholder="请输入"   right="true"  data-index="10"   bind:change = "inValueChange" />
+	<i-input title="运营专员"  placeholder="请输入"   right="true"  data-index="11"   bind:change = "inValueChange" />
+
+	<view class="f-14 col-3 mt-5 bck-fff p-10">备注</view>
+	<textarea wx:if="{{!menuShow}}"  class="bck-fff p-10 widthText" placeholder="请输入备注"  data-index="12"   bind:change = "inValueChange" >
+
+	</textarea>
+
+	<cover-view wx:if="{{!menuShow}}"  class="saveButton" style="width:80%">
+		<button class="saveButton" style="width:80%" catchtap="onClickSubmit">提交申请</button>
+	</cover-view>
+	<view wx:else class="saveButton saveButton_1" style="width:80%" catchtap="onClickSubmit">提交申请</view>
+
+
+	<view class="{{menuShow? 'full-bg full-opacity':''}}" catchtap="hideBackground"></view>
+
+
+</view>
+
+
+	<!-- 子菜单 -->
+	<view class="sub_menu" wx:if="{{menuShow}}">
+		<view wx:for="{{menus}}" class="menu_li" wx:key="un">
+			<view data-index="{{index}}" data-status="{{item.status}}" bindtap="menuClick" class="dis-flex flex-x-between align-items">
+				<view class="col-b">{{item.title}}</view>
+				<view>
+					<image class="icon_img" src="{{ menuSelectIndex == index? '/images/yy_xz_gou@2x.png':''}}"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!-- 背景遮罩 -->

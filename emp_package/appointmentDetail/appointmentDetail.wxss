@@ -1,0 +1,94 @@
+/* emp_package/appointmentDetail/appointmentDetail.wxss */
+.module{
+  background-color: #fff;
+  border-radius: 5px;
+  /* margin-bottom: 10px;  */
+}
+.content{
+  padding: 5px 10px;
+  font-size: 15px;
+  height:40px;
+  line-height: 40px;
+}
+
+.widthText{
+	width: 100%;
+}
+
+.height{
+  height: 180px;
+}
+.saveButton{
+
+  color: #ffffff;
+  height: 40px;
+  position: fixed;
+  bottom: 10px;
+  left: 10vw;
+  font-size: 14px;
+  }
+  
+  .saveButton1{
+  background-color: #A578BC;
+  color: #ffffff;
+  text-align: center;
+  line-height: 40px;
+  font-size:15px ;
+  border-radius: 20px;
+  }
+  
+  .saveButton2{
+  background-color:  rebeccapurple;
+  color: #ffffff;
+  text-align: center;
+  line-height: 40px;  
+  font-size:15px ;
+  border-radius: 20px;
+
+  }
+  .item_content{
+    background-color:#F1ECF4;
+    height:25px;
+    text-align: center;
+    line-height: 25px;
+    border: 1px solid rgb(180, 131, 192);
+  }
+
+.weui-demo-dialog{
+  visibility:hidden;
+  opacity:0;
+  transition:opacity .3s;
+}
+.weui-demo-dialog_show{
+  visibility:visible;
+  opacity:1;
+}
+.button1{
+  border-radius: 15px;
+  background-color: #ccc;
+  width:110px;
+  height: 40px;
+  margin-top: 15px;
+  line-height: 40px;
+  color: rebeccapurple;
+  font-size: 15px;
+  margin-left: 10%;
+
+}
+.button2{
+  border-radius: 15px;
+  background-color: rebeccapurple;
+  width:110px;
+  height: 40px;
+  margin-top: 15px;
+  line-height: 40px;
+  color: #ffffff;
+  font-size: 15px;
+  margin-left: 10%;
+
+}
+.dislog_content{
+  font-size:15px;
+  width:180px;
+  padding-bottom:20px
+}

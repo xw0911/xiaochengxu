@@ -1,0 +1,56 @@
+<!--partner_package/FromDetail/FromDetail.wxml-->
+<view class="container">
+	<view class="p-15" style="margin-top:-20px">
+		<view class="module" wx:key="*this">
+			<view class="dis-flex flex-x-between content b-b">
+				<view class="col-grey">顾客：</view>
+				<view> 钱淑华</view>
+			</view>
+			<view class="dis-flex flex-x-between content b-b">
+				<view class="col-grey">总监：</view>
+				<view>李佳琳（653256）</view>
+			</view>
+			<view class="dis-flex flex-x-between content b-b">
+				<view class="col-grey">手术分类：</view>
+				<view>手术</view>
+			</view>
+			<view class="dis-flex flex-x-between content b-b">
+				<view class="col-grey">手术间：</view>
+				<view>1号手术间</view>
+			</view>
+			<view class="dis-flex flex-x-between content b-b">
+				<view class="col-grey">医生：</view>
+				<view>李家伟（568923）</view>
+			</view>
+			<view class="dis-flex flex-x-between content b-b">
+				<view class="col-grey">麻醉：</view>
+				<view>局麻</view>
+			</view>
+			<view class="dis-flex flex-x-between content b-b">
+				<view class="col-grey">麻醉医生：</view>
+				<view>李家伟（568923）</view>
+			</view>
+			<view class="dis-flex flex-x-between content b-b">
+				<view class="col-grey">医助：</view>
+				<view> 李家伟（568923） </view>
+			</view>
+			<view class="dis-flex flex-x-between content b-b">
+				<view class="col-grey">巡回护士：</view>
+				<view>李家伟（568923）</view>
+			</view>
+			<view class="dis-flex flex-x-between content b-b">
+				<view class="col-grey">日期：</view>
+				<view>2018-08-22  13:35</view>
+			</view>
+			<view class="dis-flex p-10-12 ">
+				<view class="col-grey">项目：</view>
+				<view class="ml-10">
+          <view class="col-pink bor-5 mb-10 item_content">自体脂肪丰苹果肌（品项）</view>
+          <view class="col-pink bor-5 mb-10 item_content">自体脂肪丰苹果肌（品项）</view>
+          <view class="col-pink bor-5 mb-10 item_content">自体脂肪丰苹果肌（品项）</view>
+          <view class="col-pink bor-5 mb-10 item_content">自体脂肪丰苹果肌（品项）</view>
+        </view>
+			</view>
+		</view>
+	</view>
+</view>

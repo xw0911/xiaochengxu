@@ -1,0 +1,106 @@
+<view class="container">
+	<view class="p-15" style="margin-top:-20px">
+		<view class="module">
+			<view class="dis-flex flex-x-between content b-b">
+				<view>顾客</view>
+				<view>{{content.custName}}</view>
+			</view>
+			<view class="dis-flex flex-x-between content b-b">
+				<view>运营专员</view>
+				<view>{{content.consulantName}}</view>
+			</view>
+		</view>
+	</view>
+	<view class="p-15" style="margin-top:-20px">
+		<view class="module">
+			<view class="dis-flex flex-x-between content b-b">
+				<view>修复类型</view>
+				<view>{{content.RepairTypeName}}</view>
+			</view>
+			<view class="dis-flex flex-x-between content b-b">
+				<view>医院信息</view>
+				<view>{{content.entityName}}</view>
+			</view>
+			<view class="dis-flex flex-x-between content b-b">
+				<view>医生</view>
+				<view>{{content.creater}}</view>
+			</view>
+		</view>
+	</view>
+	<view class="p-15" style="margin-top:-20px">
+		<view class="module">
+			<view class="dis-flex flex-x-between content b-b">
+				<view>预约到院时间</view>
+				<view>{{content.appointmentTime}}</view>
+			</view>
+			<view class="dis-flex flex-x-between content ">
+				<view>预约时长</view>
+				<view>{{content.duration}}</view>
+			</view>
+		</view>
+	</view>
+	<view class="p-15" style="margin-top:-20px">
+		<view class="module">
+			<view class="dis-flex flex-x-between content b-b">
+				<view>状态</view>
+				<view style="color:{{Color}}">{{statusContent}}</view>
+			</view>
+		</view>
+	</view>
+		<view class="p-15" style="margin-top:-20px">
+		<view class="module">
+			<view class="  content b-b">
+				<view>选择品项</view>
+			</view>
+			<view class="ml-10 mt-5" wx:for='{{productList}}' wx:key='*this'>
+          <view class="col-pink bor-5 mb-10 item_content">{{item.productName}}<text class="col-pink">（{{item.tab}}）</text></view>        
+      </view>
+		</view>
+	</view>
+          <view class="weui-demo-dialog {{istrue ? 'weui-demo-dialog_show' : ''}}">
+          <view class="weui-mask" bindtap="closeDialog"></view>
+          <view class="weui-dialog__wrp" bindtap="closeDialog">
+              <view class="weui-dialog" catchtap="stopEvent">          
+                <view class="weui-dialog__hd">
+                  <image src="../../images/gth@1x.png" style="width:20px;height:20px"></image>
+                  <view class="weui-dialog__title mt-5">确定要取消预约吗</view>
+                </view>
+                <view class="weui-dialog__bd" style="margin:0 auto">
+                <view class="dislog_content">确定后手术预约将失效，手术预约信息将不可修改</view>
+                </view>
+                <view class="weui-dialog__ft ">
+                <view class="dis-flex flex-x-around" style="width:100%;padding-right:10%;">
+                    <view class="weui-dialog__btn weui-dialog__btn_default button1" bindtap="closeDialog">取消</view>
+                    <view class="weui-dialog__btn button2" bindtap="makeSure">确定</view>
+                </view>
+                </view>
+              </view>
+          </view>
+        </view>
+         <view class="weui-demo-dialog {{makesure ? 'weui-demo-dialog_show' : ''}}">
+          <view class="weui-mask" bindtap="closeDialog"></view>
+          <view class="weui-dialog__wrp" bindtap="closeDialog">
+              <view class="weui-dialog" catchtap="stopEvent">          
+                <view class="weui-dialog__hd">
+                  <image src="../../images/gth@1x.png" style="width:20px;height:20px"></image>
+                  <view class="weui-dialog__title mt-5">确定顾客到医院了吗？</view>
+                </view>
+                <view class="weui-dialog__bd" style="margin:0 auto">
+                <view class="dislog_content">确定后手术预约状态将变成已到院</view>
+                </view>
+                <view class="weui-dialog__ft ">
+                <view class="dis-flex flex-x-around" style="width:100%;padding-right:10%;">
+                    <view class="weui-dialog__btn weui-dialog__btn_default button1" bindtap="closeDialog">取消</view>
+                    <view class="weui-dialog__btn button2" bindtap="makeSure">确定</view>
+                </view>
+                </view>
+              </view>
+          </view>
+        </view>
+	<block wx:if="{{aptShow}}">
+		<view class="saveButton dis-flex flex-x-between" style="width:80%">
+			<button class="saveButton1" style="width:50%;" bindtap="openDialog">取消预约</button>
+			<button class="saveButton2" style="width:50%" catchtap="makesure">到院确认</button>
+		</view>
+	</block>
+</view>

@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "i-tabs": "../../components/iView-Weapp-UI/tabs/index",
+    "i-tab": "../../components/iView-Weapp-UI/tab/index",
+    "i-row": "../../components/iView-Weapp-UI/row/index",
+    "i-col": "../../components/iView-Weapp-UI/col/index",
+    "i-cell-group": "../../components/iView-Weapp-UI/cell-group/index",
+    "i-cell": "../../components/iView-Weapp-UI/cell/index"
+
+
+  }
+}

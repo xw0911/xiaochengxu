@@ -1,0 +1,66 @@
+/* pages/emp_logIn/emp_logIn.wxss */
+
+.container {
+  background-color: #fff;
+}
+
+.content {
+	width: 80vw;
+	margin: auto;
+	padding-top: 5vh;
+}
+
+.logo_img {
+  text-align: center;
+}
+
+.logo_img .img {
+  width: 200px;
+  height: 109px;
+}
+
+.view_from {
+  margin-top: 30px;
+}
+
+.view_li {
+  padding: 20px 0 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.icon_img {
+  width: 20px;
+  height: 20px;
+}
+.icon_img_pas{
+   width: 18px;
+  height: 18px;
+}
+
+.account {
+  width: 100%;
+}
+
+.password {
+  width: 80%;
+}
+
+.btn_login {
+  background-color: #794891 !important;
+  color: #fff !important;
+  border-radius: 40px;
+  margin-top: 50px;
+}
+.btn_login_affirm {
+  background-color: #794891 !important;
+  color: #fff !important;
+  border-radius: 50px;
+	margin-top: 50px;
+}
+.btn{
+  border: 1px solid #794891!important;
+  color: #794891 !important;
+  border-radius: 40px;
+  margin-top: 50px;
+}
+

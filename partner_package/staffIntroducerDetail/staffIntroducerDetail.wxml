@@ -1,0 +1,49 @@
+<view class="container">
+	<view class="p-15" wx:if="{{tab =='tab2'}}">
+		<view class="module pl-10" style="display:flex">
+		<view style="padding-top:8px;padding-right:5px;">
+			<view style="border-radius:50%;width:5px;height:5px;background-color:{{bkColor}};"></view>
+		</view>
+		<view>
+			<view> {{applyDetail}}</view>
+			<view class="col-9">{{applyWelcome}} </view>
+		</view>
+		
+		</view>
+	</view>
+
+	<view class="p-15" style="margin-top:-20px">
+		<view class="module"  wx:key="*this">
+			<view class="dis-flex flex-x-between content b-b">
+				<view>介绍人名称</view>
+				<view>{{introducerDetail.applyName}}</view>
+			</view>
+			<view class="dis-flex flex-x-between content">
+				<view>电话</view>
+				<view>{{introducerDetail.phone}}</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="p-15" style="margin-top:-20px">
+		<view class="module">
+			<view class="dis-flex flex-x-between content b-b">
+				<view>开户行</view>
+				<view>{{introducerDetail.openingBank}}</view>
+			</view>
+			<view class="dis-flex flex-x-between content">
+				<view>开户行账号</view>
+				<view>{{introducerDetail.bankAccount}}</view>
+			</view>
+		</view>
+	</view>
+<view class="p-15">
+  <view class="f-14 col-3 mt-5 bck-fff p-10 height">备注:{{introducerDetail.remark}}</view>
+</view>
+	<block wx:if="{{tab !=='tab2'}}">
+				<cover-view class="saveButton dis-flex flex-x-between" style="width:80%">
+			<button class="saveButton1" style="width:50%;" bindtap="refuse">拒绝</button>
+			<button class="saveButton2" style="width:50%" catchtap="agree">同意</button>
+		</cover-view>
+	</block>
+</view>

@@ -1,0 +1,133 @@
+/* pages/appointment/appointment.wxss */
+.icon-img {
+  width: 7px;
+  height: 5px;
+}
+
+.picker {
+  width: 80px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  margin-left: 8px;
+}
+
+.weui-demo-dialog {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s;
+}
+
+.weui-half-screen-dialog {
+  transition: all .3s;
+  transform: translateY(100%);
+}
+
+.weui-demo-dialog_show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.weui-demo-dialog_show .weui-half-screen-dialog {
+  transform: translateY(0);
+  bottom: 48px
+}
+
+.main {
+  font-size: 12px;
+}
+
+.line {
+  margin: 0 auto;
+  width: 2px;
+  height: 30px;
+  background-color: #D8D8D8;
+  text-align: center;
+  line-height: 30px;
+}
+
+.saveButton1 {
+  background-color: #794891;
+  color: #ffffff;
+  width: 75px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+
+.saveButton {
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.saveButton3 {
+  background-color: #A578BC;
+  color: #ffffff;
+  text-align: center;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 20px;
+}
+
+.saveButton2 {
+  background-color: #ffffff;
+  color: black;
+  width: 75px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.saveButton4 {
+  background-color: #794891;
+  color: #ffffff;
+  width: 75px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 20px;
+}
+
+.select_img {
+  width: 15px;
+  height: 15px;
+  margin-top: 5px
+}
+
+.header {
+  width: 100%;
+  padding: 5px 10px
+}
+
+.content {
+  padding: 15px 12px;
+}
+
+.data_time {
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.appontment-item {
+  flex-wrap: wrap;
+  margin-top: 15px;
+  padding: 0 30px;
+}
+.typeName{
+    background-color:#F1ECF4;
+    text-align: center;
+    line-height: 25px;
+    border: 1px solid #794891;
+    height:25px;
+    line-height:25px;
+    width:45px;
+    font-size:10px;
+    color: #794891;
+}

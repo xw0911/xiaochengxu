@@ -1,0 +1,80 @@
+<!--partner_package/partnerApply/partnerApply.wxml-->
+<view class="container">
+	<view class="p-15">
+		<view class="module">
+			<view class="title p-10 b-b">合伙人申请</view>
+			<view class="dis-flex flex_wrap p-0-15">
+				<navigator url="../../partner_package/introducerApply/introducerApply" class="flex_li">
+					<view>
+						<image class="icon_img" src="/images/gz_grzx@2x.png"></image>
+					</view>
+					<view>介绍人</view>
+				</navigator>
+				<navigator url="../../partner_package/agentApply/agentApply" class="flex_li">
+					<view>
+						<image class="icon_img" src="/images/gk_sp@2x.png"></image>
+					</view>
+					<view>代理商</view>
+				</navigator>
+				<navigator url="../../partner_package/storeApply/storeApply" class="flex_li">
+					<view>
+						<image class="icon_img" src="/images/gk_sp@2x.png"></image>
+					</view>
+					<view>店家</view>
+				</navigator>
+			</view>
+		</view>
+	</view>
+
+	<i-tabs current="{{ currentTabKey }}" bindchange="onClickTabChange" color="#f759ab">
+			<i-tab key="tab1" title="申请信息"></i-tab>
+			<i-tab key="tab2" title="我的佣金"></i-tab>
+	</i-tabs>
+
+<!-- 登录后展示的界面 -->
+	<block wx:if="{{authToken}}">
+		<block wx:if="{{currentList }}" >
+			<view wx:for="{{applyList}}" wx:key="*this" class="applMesList flex-y-center" bindtap="goDetail" data-statusname="{{item.statusName}}" data-id="{{item.id}}" data-tobetype="{{item.toBeType}}">
+				<view  class="dis-flex flex-dir-row pb-5" >
+					<image class="iconSize" src="{{item.toBeType =='c'?'../../images/gk_sp@2x.png':'../../images/gk_jcda@2x.png'}}"></image>
+					<view class="f-16 fw-600 col-3 pl-10">{{item.applyName}}--{{item.toBeName}}</view>
+				</view>
+				<view class="dis-flex flex-dir-row flex-x-between">
+					<view class="f-12 col-9">提交时间:{{item.applyTime}}</view>
+					<view class="f-10 col-f p-3 bor-3" style="background-color:{{item.statusColor}}">{{item.statusName}}</view>
+				</view>
+			</view>
+		</block>
+		<block wx:else> 
+			<view  class="" >
+				<i-panel  title="">
+					<i-cell i-class="b-b f-14 fw-600 col-3" title="孙磊介绍人2" bind:click='onClickIntroducer' is-link >
+							<i-icon type="mine_fill" slot="icon" color="#f03539" size="23" />
+					</i-cell>
+					
+					<i-cell i-class="b-b f-14 col-3 fw-600"  title="孙磊代理商" bind:click='clickGiveProject' is-link >
+							<i-icon type="mine_fill" slot="icon" color="#f03539" size="23" />
+					</i-cell>
+
+					<i-cell i-class="b-b f-14 col-3 fw-600" title="孙磊店家" bind:click='clickGiveProject' is-link >
+							<i-icon type="mine_fill" slot="icon" color="#f03539" size="23" />
+					</i-cell>
+				</i-panel>
+			</view>
+		</block>
+
+	
+
+	
+	</block>
+	<!-- 未登录展示的界面 -->
+	<block wx:else>
+		<view class="loginV" bindtap="onClickLogin"> 请登录</view>
+	
+	</block>
+
+
+
+
+
+</view>

@@ -1,0 +1,19 @@
+/* partner_package/introducerApply/introducerApply.wxss */
+.widthText{
+	width: 100%;
+}
+
+.height{
+	height: 150px;
+}
+
+.saveButton{
+	background-color: rebeccapurple;
+	color: #ffffff;
+	height: 40px;
+	border-radius: 20px;
+	position: fixed;
+	bottom: 10px;
+	left: 10vw;
+
+}

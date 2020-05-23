@@ -1,0 +1,55 @@
+<!--partner_package/partnerCommission/partnerCommission.wxml-->
+<view class="container pb-50">
+	<view class="commissio">
+		<view>可提现</view>
+		<view class="comdes">佣金说明</view>
+		<view class="f-20 dis-flex flex-dir-row pt-10 pb-10">5006.00</view>
+		<view class="freeze">冻结中300元</view>
+	
+	</view>
+	<i-cell-group>
+    <i-cell title="孙蕾代理商" >
+			<i-icon type="like_fill" slot="icon" color="#f03539" size="23" />
+		</i-cell>
+
+    <i-cell i-class="b-b f-14 col-3" title="看看佣金动态" label="当前最高收入: ¥5421.00" bind:click='clickMyCunLiaf-ng' is-link >
+    </i-cell>
+	</i-cell-group>
+
+
+	<view class="p-10 f-14 col-3">
+		<view >提现需要实名认证和我司确认签订合同，并绑定银行卡。</view>			
+		<view >提示</view>	
+		<view>1、已实名认证的提现金额会在审核后打入当前合伙人对应的法人银行账户
+		     	2、未实名的联系我司服务人员，进行实名认证
+					 3、联系电话‘’‘’‘’\
+					 1、已实名认证的提现金额会在审核后打入当前合伙人对应的法人银行账户
+		     	2、未实名的联系我司服务人员，进行实名认证
+					 3、联系电话‘’‘’‘’
+					 1、已实名认证的提现金额会在审核后打入当前合伙人对应的法人银行账户
+		     	2、未实名的联系我司服务人员，进行实名认证
+					 3、联系电话‘’‘’‘’
+					 1、已实名认证的提现金额会在审核后打入当前合伙人对应的法人银行账户
+		     	2、未实名的联系我司服务人员，进行实名认证
+					 3、联系电话‘’‘’‘’
+					 1、已实名认证的提现金额会在审核后打入当前合伙人对应的法人银行账户
+		     	2、未实名的联系我司服务人员，进行实名认证
+					 3、联系电话‘’‘’‘’
+					 1、已实名认证的提现金额会在审核后打入当前合伙人对应的法人银行账户
+		     	2、未实名的联系我司服务人员，进行实名认证
+					 3、联系电话‘’‘’‘’
+					 1、已实名认证的提现金额会在审核后打入当前合伙人对应的法人银行账户
+		     	2、未实名的联系我司服务人员，进行实名认证
+					 3、联系电话‘’‘’‘
+				 </view>
+	
+	</view>
+
+
+		<button class="saveButton" style="width:80%">申请提现</button>
+
+
+</view>
+
+
+

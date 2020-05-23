@@ -1,0 +1,86 @@
+<view class="container">
+	<view class="p-15">
+		<view class="module pl-10" style="display:flex">
+		<view style="padding-top:8px;padding-right:5px;">
+			<view style="border-radius:50%;width:5px;height:5px;background-color:{{bkColor}};"></view>
+		</view>
+		<view>
+			<view> {{applyDetail}}</view>
+			<view class="col-9">{{applyWelcome}} </view>
+		</view>
+		
+		</view>
+	</view>
+
+	<view class="p-15" style="margin-top:-20px">
+		<view class="module" wx:key="*this">
+			<view class="dis-flex flex-x-between content b-b">
+				<view>代理商名称</view>
+				<view>{{agentDetail.applyName}}</view>
+			</view>
+      <view class="dis-flex flex-x-between content b-b">
+				<view>联系人</view>
+				<view>{{agentDetail.contact}}</view>
+			</view>
+			<view class="dis-flex flex-x-between content b-b">
+				<view>手机</view>
+				<view>{{agentDetail.phone}}</view>
+			</view>
+			<view class="dis-flex flex-x-between content b-b">
+				<view>邮箱</view>
+				<view>{{agentDetail.email}}</view>
+			</view>
+			<view class="dis-flex flex-x-between content b-b">
+				<view>所在地区</view>
+				<view>{{agentDetail.location}}</view>
+			</view>
+			<view class="p-10">
+				<view class="f-14 col-3 mt-5 bck-fff p-10 height">详细地址:{{agentDetail.locationDetail}}</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="p-15" style="margin-top:-20px">
+		<view class="module">
+			<view class="dis-flex flex-x-between content b-b">
+				<view>代理商来源</view>
+				<view>{{agentDetail.sourceType}}</view>
+			</view>
+			<view class="dis-flex flex-x-between content">
+				<view>介绍人</view>
+				<view>{{agentDetail.sourceName}}</view>
+			</view>
+		</view>
+	</view>
+
+  <view class="p-15" style="margin-top:-20px">
+		<view class="module">
+			<view class="dis-flex flex-x-between content b-b">
+				<view>开户行</view>
+				<view>{{agentDetail.openingBank}}</view>
+			</view>
+			<view class="dis-flex flex-x-between content">
+				<view>开户行账号</view>
+				<view>{{agentDetail.bankAccount}}</view>
+			</view>
+		</view>
+	</view>
+  <view class="p-15" style="margin-top:-20px">
+		<view class="module">
+			<view class="dis-flex flex-x-between content b-b">
+				<view>业务代表</view>
+				<view>{{agentDetail.corporation}}</view>
+			</view>
+		</view>
+	</view>
+	<view class="p-15">
+		<view class="f-14 col-3 mt-5 bck-fff p-10 height">备注:{{agentDetail.remark}}</view>
+	</view>
+	<block wx:if="{{tab !=='tab2'}}">
+				<cover-view class="saveButton dis-flex flex-x-between" style="width:80%">
+			<button class="saveButton1" style="width:50%;" bindtap="refuse">拒绝</button>
+			<button class="saveButton2" style="width:50%" catchtap="agree">同意</button>
+		</cover-view>
+	</block>
+
+</view>

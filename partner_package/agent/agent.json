@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "i-tabs": "../../components/iView-Weapp-UI/tabs/index",
+    "i-tab": "../../components/iView-Weapp-UI/tab/index",
+    "i-input": "../../components/iView-Weapp-UI/input/index"
+  },
+  "navigationBarTitleText": "代理商审批"
+}

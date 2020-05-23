@@ -1,0 +1,38 @@
+<!--partner_package/selectstore/selectstore.wxml-->
+<view class="container">
+	<view class="p-15">
+		<view class="module">
+			<view>筛选</view>
+			<view class="mt-15">介绍人</view>
+      <view class="padding-box">
+          <input  type="text" value="{{searchInfo}}" bindinput="bindKeyPas" bindblur="blurChange" placeholder="请输入名称搜索" class="b-a bor-3 ipt mt-5"/>
+      </view>
+      <view class="mt-15">申请时间</view> 
+			<view class="section" style="display:felx">
+	<view style="display:flex;" class="mt-5">
+			<view style="margin-left:12%;">
+		  <picker mode="date" value="{{date}}" start="2010-09-01" end="2050-09-01" bindchange="bindDateStart">
+    <view  style="width:100px;height:30px;text-align:center;line-height:30px;" class="b-a">
+       {{startTime}}
+    </view>
+  </picker>
+	</view>
+		<view style="margin-left:12%;">--</view>
+	<view style="margin-left:12%;">
+		 <picker mode="date" value="{{date}}" start="2010-09-01" end="2050-09-01" bindchange="bindDateEnd">
+    <view class="b-a" style="width:100px;height:30px;text-align:center;line-height:30px;">
+       {{endTime}}
+    </view>
+  </picker>
+	</view>
+	
+	</view>
+ 
+</view>
+		</view>
+    	<cover-view  class="saveButton dis-flex flex-x-between" style="width:80%">
+      <button class="saveButton1" style="width:50%;" catchtap="clearContent" >重置</button>
+		<button class="saveButton2" style="width:50%" catchtap="onClickSubmit">确定</button>
+	</cover-view>
+	</view>
+</view>

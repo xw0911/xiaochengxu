@@ -1,0 +1,79 @@
+{
+  "pages":[     
+     "pages/emp_logIn/emp_logIn",
+    "pages/aft_login/aft_login",    
+    "pages/appointment/appointment"      
+    
+  ],
+  "subPackages": [
+		{
+			"root": "partner_package",
+			"pages": [
+        "partnerLogin/partnerLogin",
+        "partnerApply/partnerApply",
+        "introducerApply/introducerApply",
+        "agentApply/agentApply",
+        "storeApply/storeApply",
+        "partnerCommission/partnerCommission",
+        "checkPeople/checkPeople",
+        "agent/agent",
+        "store/store",
+        "centerPeople/centerPeople",
+        "changePassword/changePassword",
+        "selectstore/selectstore",
+        "applyDetail/applyDetail",
+        "agentDetail/agentDetail",
+        "storeDetail/storeDetail",
+        "alreadyCheck/alreadyCheck",
+        "approveRefuse/approveRefuse",
+        "approveAgree/approveAgree",
+        "staffAgentDetail/staffAgentDetail",
+        "staffIntroducerDetail/staffIntroducerDetail",
+        "staffStoreDetail/staffStoreDetail",
+        "declarationForm/declarationForm",
+        "FromDetail/FromDetail",
+        "insertAppoitment/insertAppoitment"
+      ]
+		},
+		{
+			"root": "emp_package",
+			"pages": [
+        "appointmentDetail/appointmentDetail",
+        "selectCustomer/selectCustomer",
+        "selectHospital/selectHospital",
+        "selectDoctor/selectDoctor",
+        "selectKind/selectKind"
+			]
+		}
+  ],
+  "tabBar": {
+    "custom": true,
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath":"pages/appointment/appointment"  ,
+        
+     
+        "text": "预约"
+      },
+      {
+        "pagePath": "pages/aft_login/aft_login",
+       
+        "text": "工作"
+      }
+    ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "名媛医美",
+    "navigationBarTextStyle":"black"
+  },
+  
+
+  "sitemapLocation": "sitemap.json"
+
+}

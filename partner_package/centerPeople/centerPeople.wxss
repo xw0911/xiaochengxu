@@ -1,0 +1,39 @@
+/* partner_package/centerPeople/centerPeople.wxss */
+.module{
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 10px; 
+}
+
+.module1{
+  text-align: center;
+  padding: 15px 0;
+}
+
+.content{
+  padding: 5px 10px;
+  font-size: 15px;
+}
+
+.saveButton{
+	background-color: rebeccapurple;
+	color: #ffffff;
+	height: 40px;
+	border-radius: 20px;
+	position: fixed;
+	bottom: 10px;
+	left: 10vw;
+	font-size: 14px;
+}
+
+.userinfo-avatar {  
+  overflow:hidden;  
+	display: block;
+  width: 140rpx;  
+  height: 140rpx;   
+  margin-top: 50rpx;  
+  border-radius: 50%;  
+  border: 2px solid #fff;  
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);  
+	margin: 0 auto;
+} 

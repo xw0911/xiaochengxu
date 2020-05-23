@@ -1,0 +1,40 @@
+<view class="container">
+
+  <view class="content">
+    <view class="logo_img" bindtap="goDeform">
+      <image class="img" src="../../images/logInlogo.jpg"></image>
+    </view>
+
+    <view class="view_from">
+      <view class="view_li dis-flex flex-y-center">
+        <view class="mr-10">
+          <image class="icon_img" src="/images/login_yh@2x.png"></image>
+        </view>
+        <view class="account">
+          <input bindinput="bindKeyAccount" placeholder="输入账号" />
+        </view>
+      </view>
+
+      <view class="view_li dis-flex flex-y-center">
+        <view class="mr-10">
+          <image class="icon_img" src="/images/login_password@2x.png"></image>
+        </view>
+        <view class="password">
+          <input type="{{input_type}}" password bindinput="bindKeyPas" bindblur="blurChange" placeholder="输入密码" />
+        </view>
+
+
+        <view class="ml-10" bindtap="editTypeClick">
+          <image class="icon_img_pas" src="{{src_pas}}"></image>
+        </view>
+      </view>
+
+    </view>
+
+    <button class="{{disable?'btn_login_affirm':'btn_login'}}" type="default" style="width:80vw" bindtap="loginClick">登录</button>
+
+		<button class="btn" type="default" bindtap="onPartnerClick" style="width:80vw" >成为合伙人</button>
+  </view>
+
+</view>
+

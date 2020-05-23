@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "i-avatar": "../../components/iView-Weapp-UI/avatar/index"
+
+  },
+  "navigationBarTitleText": "个人中心"
+}

@@ -1,0 +1,13 @@
+<!--emp_package/selectHospital/selectHospital.wxml-->
+<view class="container">
+	<view class="mr-10 ml-10 dis-flex mt-10" bindtap="goselect">
+		<image src="../../images/yy_sx_ss@2x.png" style="margin-top:20px" class="search"></image>
+		<input class="check-people bck-fff pl-40 Ipt mt-10" placeholder="请输入名称后搜索" bindinput="getDatail"></input>
+	</view>
+
+  <view class="bck-fff mt-15" style="width:100%;padding:20px 20px;" wx:for='{{content}}' wx:key='*this'>
+  <view class="mt-15" data-Text="{{item.text}}" data-id="{{item.id}}" bindtap="getText">
+    {{item.text}}
+  </view>
+  </view>
+</view>

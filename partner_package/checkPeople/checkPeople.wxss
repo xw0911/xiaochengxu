@@ -1,0 +1,30 @@
+/* partner_package/checkPeople/checkPeople.wxss */
+.search{
+  width:20px;height:20px;
+  position:fixed;
+  margin-left:15px;
+  margin-top:10px
+}
+.Ipt{
+  width:70%;
+  height:40px;
+  border-radius: 20px;
+}
+.content{
+  height:100px;
+  width:92%
+}
+.shaixuan{
+  height:40px;
+  line-height:40px;
+  text-align:center;
+}
+.select-img{
+  width:20px;
+  height:20px;
+}
+
+.content1{
+  height:120px;
+  width:92%
+}

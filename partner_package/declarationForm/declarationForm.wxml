@@ -1,0 +1,35 @@
+<!--partner_package/declarationForm/declarationForm.wxml-->
+<view class="container">
+	<view class="mt-5 module dis-flex">
+		<view style="margin-left:4%" class="picker">
+			<picker mode="date" value="{{date}}" start="2010-09-01" end="2050-09-01" bindchange="bindDateStart">
+				<view class="b-a picker_view bor-3">
+					{{statrTime}}
+				</view>
+			</picker>
+		</view>
+		<view style="margin-left:4%" class="picker">
+			<picker mode="date" value="{{date}}" start="2010-09-01" end="2050-09-01" bindchange="bindDateEnd">
+				<view class="b-a bor-3 picker_view">
+					{{endTime}}
+				</view>
+			</picker>
+		</view>
+		<view class="saveButton">查询</view>
+	</view>
+	<view class="form_detail flex-x-between dis-flex" bindtap="goFromDetail">
+		<view>
+			<image src="../../images/xkdj_zwt@2x.png" class="icon-img"></image>
+		</view>
+		<view>
+			<text class="f-15 fw-600 ">熊淑媛</text>
+			<view class="col-grey">医生：<text>李佳玲（653256）</text></view>
+			<view class="col-grey">总监： <text>李佳玲（653256）</text></view>
+			<view class="col-grey">麻醉：<text>李佳玲（653256）</text></view>
+		</view>
+		<view class="col-grey">
+			日期：2020-5-14：9:00
+		</view>
+	</view>
+
+</view>

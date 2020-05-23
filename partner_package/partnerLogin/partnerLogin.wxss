@@ -1,0 +1,21 @@
+/* partner_package/partnerLogin/partnerLogin.wxss */
+
+.containerlog{
+	display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.log_icon{
+	margin-top: 90px;
+  width: 200px;
+  height: 109px;
+}
+
+.buttonC{
+	border-radius: 20px;
+	height: 40px;
+  margin-top: 50px;
+}
